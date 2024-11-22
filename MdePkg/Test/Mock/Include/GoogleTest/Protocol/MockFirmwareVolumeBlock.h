@@ -26,32 +26,32 @@ struct MockFirmwareVolumeBlockProtocol {
     EFI_STATUS,
     GetAttributes,
     (
-     IN CONST  EFI_FIRMWARE_VOLUME_BLOCK2_PROTOCOL* This,
-     OUT       EFI_FVB_ATTRIBUTES_2* Attributes)
+     IN CONST  EFI_FIRMWARE_VOLUME_BLOCK2_PROTOCOL    *This,
+     OUT       EFI_FVB_ATTRIBUTES_2                   *Attributes)
     );
 
   MOCK_FUNCTION_DECLARATION (
     EFI_STATUS,
     SetAttributes,
     (
-     IN CONST  EFI_FIRMWARE_VOLUME_BLOCK2_PROTOCOL* This,
-     IN OUT    EFI_FVB_ATTRIBUTES_2* Attributes)
+     IN CONST  EFI_FIRMWARE_VOLUME_BLOCK2_PROTOCOL    *This,
+     IN OUT    EFI_FVB_ATTRIBUTES_2                   *Attributes)
     );
 
   MOCK_FUNCTION_DECLARATION (
     EFI_STATUS,
     GetPhysicalAddress,
     (
-     IN CONST  EFI_FIRMWARE_VOLUME_BLOCK2_PROTOCOL* This,
-     OUT       EFI_PHYSICAL_ADDRESS* Address)
+     IN CONST  EFI_FIRMWARE_VOLUME_BLOCK2_PROTOCOL    *This,
+     OUT       EFI_PHYSICAL_ADDRESS                   *Address)
     );
 
   MOCK_FUNCTION_DECLARATION (
     EFI_STATUS,
     GetBlockSize,
     (
-     IN CONST  EFI_FIRMWARE_VOLUME_BLOCK2_PROTOCOL* This,
-     IN        EFI_LBA                             Lba,
+     IN CONST  EFI_FIRMWARE_VOLUME_BLOCK2_PROTOCOL    *This,
+     IN        EFI_LBA                                Lba,
      OUT       UINTN* BlockSize,
      OUT       UINTN* NumberOfBlocks)
     );
@@ -60,22 +60,22 @@ struct MockFirmwareVolumeBlockProtocol {
     EFI_STATUS,
     Read,
     (
-     IN CONST  EFI_FIRMWARE_VOLUME_BLOCK2_PROTOCOL* This,
-     IN        EFI_LBA                             Lba,
-     IN        UINTN                               Offset,
-     IN OUT    UINTN* NumBytes,
-     IN OUT    UINT8* Buffer)
+     IN CONST  EFI_FIRMWARE_VOLUME_BLOCK2_PROTOCOL    *This,
+     IN        EFI_LBA                                Lba,
+     IN        UINTN                                  Offset,
+     IN OUT    UINTN                                  *NumBytes,
+     IN OUT    UINT8                                  *Buffer)
     );
 
   MOCK_FUNCTION_DECLARATION (
     EFI_STATUS,
     Write,
     (
-     IN CONST  EFI_FIRMWARE_VOLUME_BLOCK2_PROTOCOL* This,
-     IN        EFI_LBA                             Lba,
-     IN        UINTN                               Offset,
-     IN OUT    UINTN* NumBytes,
-     IN        UINT8* Buffer)
+     IN CONST  EFI_FIRMWARE_VOLUME_BLOCK2_PROTOCOL    *This,
+     IN        EFI_LBA                                Lba,
+     IN        UINTN                                  Offset,
+     IN OUT    UINTN                                  *NumBytes,
+     IN        UINT8                                  *Buffer)
     );
 };
 
