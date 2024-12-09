@@ -19,7 +19,8 @@ extern "C" {
 //
 // Declarations to handle usage of the FirmwareVolumeBlockProtocol
 //
-struct MockFirmwareVolumeBlockProtocol {
+struct MockEfiFirmwareVolumeBlockProtocol {
+
   MOCK_INTERFACE_DECLARATION (MockFirmwareVolumeBlockProtocol);
 
   MOCK_FUNCTION_DECLARATION (
